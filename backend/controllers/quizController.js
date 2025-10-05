@@ -1,22 +1,23 @@
 const pool = require('../db');
+require('dotenv').config();
 
-exports.getQuiz = async (req, res) => {
+const getQuiz = async (req, res) => {
   try {
     const result = await pool.query(
       'SELECT id, text, options FROM questions ORDER BY id;'
     );
 
-    res.status(200).json({
+    res.json({
       quizDuration: 120,
       questions: result.rows,
     });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: 'Failed to fetch quiz' });
+    res.status(500).json({ error: err.message });
   }
 };
 
-exports.submitQuiz = async (req, res) => {
+const submitQuiz = async (req, res) => {
   try {
     const { answers } = req.body;
     let score = 0;
@@ -43,3 +44,5 @@ exports.submitQuiz = async (req, res) => {
     res.status(500).json({ error: 'Failed to calculate score' });
   }
 };
+
+module.exports = { getQuiz, submitQuiz };
