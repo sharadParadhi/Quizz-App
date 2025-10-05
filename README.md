@@ -73,6 +73,6 @@ Users can:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/sharadParadhi/quiz-app.git
+git clone https://github.com/sharadParadhi/Quizz-App.git
 cd quiz-app
 ```
