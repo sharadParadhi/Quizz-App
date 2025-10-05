@@ -19,7 +19,7 @@ Users can:
 
 ## 🌐 Live Demo
 
-🔗 **Deployed URL:** [Add your deployed link here] <!-- TODO: Add deployed URL after deployment -->
+🔗 **Deployed URL:** https://quizz-app-q8tm.vercel.app/ <!-- TODO: Add deployed URL after deployment -->
 
 ---
 
